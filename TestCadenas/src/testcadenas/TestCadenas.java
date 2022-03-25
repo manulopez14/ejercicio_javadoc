@@ -49,9 +49,7 @@ public class TestCadenas {
 //        System.out.println("cadena: "+cadena);               
     }
     /**
-     * @param
-     * @throws
-     * @see #esNumerico(char) 
+     * Devuelve la cadena introducida en la variable cadena al reves
      */
     public static void cadenaReves(){
         
