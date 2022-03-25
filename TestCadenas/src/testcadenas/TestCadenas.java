@@ -19,7 +19,6 @@ public class TestCadenas {
         cadenaReves();
         cadenaMayus();
         cadenaSinEspacios();
-        cadenaContieneNumerico();
         calculoLetraDni();
         cadenaRevesCodificada();
         System.out.println("Cuantas vocales hay: "+cuentaVocales("abcdea"));
@@ -67,11 +66,19 @@ public class TestCadenas {
         System.out.println("La palabra "+cadena+" al revés es: "+cadenaReves);
     
     }
+    
+    /**
+     * Imprime en la consola el contenido de cadena pasado a mayusculas.
+     */
     public static void cadenaMayus(){
         
         String cadena="Adios";
         System.out.println("La palabra "+cadena+" en mayúsculas es: "+cadena.toUpperCase());
     }
+    
+    /**
+     * Imprime en la consola el contenido de cadena sin espacios
+     */
     public static void cadenaSinEspacios(){
         
         
@@ -79,10 +86,10 @@ public class TestCadenas {
         String cadenaSinEspacios = (cadena.replace(" ", ""));
         System.out.println("La cadena "+cadena+" sin espacios es: "+cadenaSinEspacios);
     }
-    public static boolean cadenaContieneNumerico(){
-        
-        return true;
-    }
+    
+    /**
+     * Calcula la letra del dni introducido
+     */
     public static void calculoLetraDni(){
         int dni=12345678;
         char letraDni='x';
@@ -136,6 +143,10 @@ public class TestCadenas {
             }
             System.out.println("Al dni "+dni+" le corresponde la letra "+letraDni);
     }
+    
+    /**
+     * Devuelve la cadena introducida al reves y codificada
+     */
     public static void cadenaRevesCodificada(){
         
         String cadena="Hola";
@@ -152,6 +163,12 @@ public class TestCadenas {
         }
         System.out.println("La palabra "+cadena+" al revés y codificada es: "+cadenaReves);
     }
+    
+    /**
+     * Cuenta las vocales de la cadena introducida
+     * @param cadena
+     * @return el numero de vocales
+     */
     public static int cuentaVocales(String cadena){
         
         int contador=0;
@@ -164,6 +181,12 @@ public class TestCadenas {
         }
         return contador;
     }
+    
+    /**
+     * Comprueba si el caracter introducido es numerico
+     * @param c
+     * @return 
+     */
     public static boolean esNumerico(char c){
         
             return ("0123456789".contains(String.valueOf(c)));
