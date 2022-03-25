@@ -88,7 +88,7 @@ public class TestCadenas {
     }
     
     /**
-     * Calcula la letra del dni introducido
+     * Calcula la letra del dni introducido y la imprime en consola
      */
     public static void calculoLetraDni(){
         int dni=12345678;
@@ -185,18 +185,30 @@ public class TestCadenas {
     /**
      * Comprueba si el caracter introducido es numerico
      * @param c
-     * @return 
+     * @return true si c es un numero, false si no
      */
     public static boolean esNumerico(char c){
         
             return ("0123456789".contains(String.valueOf(c)));
         
     }
+    
+    /**
+     * Calcula la letra del dni recibido como parametro
+     * @param numeroDni
+     * @return la letra del dni correspondiente
+     */
     public static char calculoLetraDni2 (int numeroDni){
         
         String letras= "TRWAGMYFPDXBNJZSQVHLCKE";
         return letras.charAt(numeroDni%23);
     }
+    
+    /**
+     * Comprueba si el dni introducido es valido
+     * @param dni
+     * @return true si es valido, false si no
+     */
     public static boolean esBuenDni(String dni){
        
         if (dni.length()==9 && Character.isAlphabetic(dni.charAt(8))){
@@ -211,9 +223,5 @@ public class TestCadenas {
             return false;
         } 
         
-    }
-//            int longitudcadena=dni.length()-2;
-//            for (int i = 0; i < longitudcadena; i++) {
-//                Character.isDigit(dni.charAt(longitudcadena));
-//                longitudcadena--;            
+    }          
 }
